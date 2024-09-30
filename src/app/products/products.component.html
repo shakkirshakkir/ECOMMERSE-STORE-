@@ -1,0 +1,20 @@
+<p>products works!</p>
+
+<div class="row">
+    
+    <div class="card" *ngFor="let i of products" style="width: 18rem;">
+        <img class="card-img-top" src="{{i.image}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{i.title|uppercase}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{i.category|uppercase}}</h6>
+          <p class="card-text">{{i.price|currency:'INR'}}</p>
+          <!-- <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a> -->
+          <div class="card-footer">
+            <button id="{{i.id}}" class="btn btn-success" (click)="clicked($event)">View details</button>
+          </div>
+        </div>
+      </div>
+
+  
+

@@ -1,0 +1,20 @@
+<p>details works!</p>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <div class="card"  style="width: 18rem;">
+            <img class="card-img-top" src="{{prod.image}}" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{prod.title|uppercase}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{prod.category|uppercase}}</h6>
+              <p class="card-text">{{prod.price|currency:'INR'}}</p>
+              <p class="card-text">RATING:{{prod.rating.rate|currency:'INR'}}</p>
+
+              <!-- <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a> -->
+              </div>
+        </div>
+
+    </div>
+    <div class="col"></div>
+</div>

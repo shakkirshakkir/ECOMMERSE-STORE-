@@ -1,0 +1,55 @@
+<p>addproduct works!</p>
+<h2 class="text-center">Add Products</h2>
+<div class="row">
+    <div class="col"></div>
+    <div class="col-10">
+        <div>
+            <label for="" [formGroup]="ProductForm">Title</label>
+            <input type="text" FormControlName="title" class="form-control">
+            <div *ngIf="ProductForm.get('title')?.invalid && ProductForm.get('title')?.touched">
+                <div class="alert alert-danger">
+                    
+                    <strong>Invalid title</strong>
+                  </div>
+    
+            </div>
+    </div>
+            <div>
+                <label for="">Category</label>
+            <div><input type="text" FormControlName="category" class="form-control">
+                <div *ngIf="ProductForm.get('category')?.invalid && ProductForm.get('category')?.touched">
+                    <div class="alert alert-danger">
+                        
+                        <strong>Invalid Category</strong>
+                      </div>
+        
+                </div>
+            </div>
+            <div>
+                <label for="">Description</label>
+            <input type="text" FormControlName="description" class="form-control">
+            <div *ngIf="ProductForm.get('description')?.invalid && ProductForm.get('description')?.touched">
+                <div class="alert alert-danger">
+                    
+                    <strong>Invalid Description</strong>
+                  </div>
+    
+            </div>
+        </div>
+            <div>
+                <label for="">Price</label>
+            <input type="number" FormControlName="price" class="form-control">
+            <div *ngIf="ProductForm.get('price')?.invalid && ProductForm.get('price')?.touched">
+                <div class="alert alert-danger">
+                    
+                    <strong>Invalid Price</strong>
+                  </div>
+    
+            </div>
+        </div><br><br>
+        <div class="text-center">
+            <button class="btn btn-success" (click)="submit()">Add</button></div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
